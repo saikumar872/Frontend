@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/style.css';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -88,6 +89,9 @@ const Signup = () => {
           {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
         </div>
         <button type="submit">Sign Up</button>
+        <p className="signin-link">
+          Already have an account? <Link to="/signin">Sign In</Link>
+        </p>
       </form>
     </div>
   );
